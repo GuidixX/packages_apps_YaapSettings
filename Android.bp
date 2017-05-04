@@ -61,11 +61,15 @@ android_library {
         "src/com/android/settings/biometrics/fingerprint2/lib/**/*.kt",
     ],
     use_resource_processor: true,
+    srcs: ["src/**/*.java", "src/**/*.kt",
+       "PixoidSettings/src/**/*.java"],
+    aaptflags: ["--extra-packages org.pixoid.pixoidsettings"],
     resource_dirs: [
         "res",
         "res-export", // for external usage
         "res-product",
         "YASP/res",
+        "PixoidSettings/res",
     ],
     static_libs: [
         // External dependencies
@@ -128,6 +132,9 @@ android_library {
         "telephony-common",
         "ims-common",
     ],
+    optimize: {
+        proguard_flags_files: ["proguard-core.flags"],
+    },
 }
 
 platform_compat_config {
