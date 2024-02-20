@@ -209,7 +209,7 @@ import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import ink.kscope.settings.wifi.tether.WifiTetherClientManager;
 
-import org.pixoid.pixoidsettings.Pixoid;
+import org.somethingos.somethingsettings.Something;
 
 public class SettingsGateway {
 
@@ -407,7 +407,7 @@ public class SettingsGateway {
             VolumeSteps.class.getName(),
             PrivateDnsSettings.class.getName(),
             RunningServices.class.getName(),
-            Pixoid.class.getName()
+            Something.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -460,6 +460,6 @@ public class SettingsGateway {
             Settings.WirelessDebuggingActivity.class.getName(),
             Settings.PrivateDnsSettingsActivity.class.getName(),
             Settings.RunningServicesDevActivity.class.getName(),
-            Settings.PixoidSettingsActivity.class.getName(),
+            Settings.SomethingSettingsActivity.class.getName(),
     };
 }
